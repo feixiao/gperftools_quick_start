@@ -13,6 +13,9 @@ void  free(std::vector<uint8_t*>& array);
 
 // export LD_PRELOAD=/usr/local/Cellar/gperftools/2.9.1_1/lib/libtcmalloc.dylib
 // env HEAPPROFILE=/Users/frank/workspace/github/gperftools_quick_start/mem HEAPCHECK=normal ./cmake-build-debug/memory/memory
+
+
+// /usr/local/Cellar/gperftools/2.9.1_1/bin/pprof 需要对应好
 //  pprof --pdf  ./cmake-build-debug/memory/memory mem.0001.heap > 1.pdf
 // pprof --text  ./cmake-build-debug/memory/memory mem.0001.heap > 1.txt
 int main() {
