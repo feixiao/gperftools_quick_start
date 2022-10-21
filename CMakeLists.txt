@@ -19,7 +19,11 @@ add_definitions(
         "-DFLOATING_POINT"
         "-Wno-narrowing"
         "-std=c++11"
+        "-g"
+        "-O0"
 )
+
+#SET(CMAKE_CXX_COMPILER /usr/bin/clang)
 
 if (${CMAKE_BINARY_DIR} STREQUAL ${CMAKE_SOURCE_DIR})
     message(FATAL_ERROR "Please into another dir to build!")
@@ -32,7 +36,7 @@ elseif (CMAKE_SYSTEM_NAME MATCHES "Darwin")
     message(STATUS "current platform: Darwin")
     set(CMAKE_MACOSX_RPATH build)
     add_definitions("-Wno-invalid-source-encoding")
-    add_definitions("-Os")
+#    add_definitions("-Os")
     set(CMAKE_OSX_SYSROOT "/Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk")
     set(CMAKE_CXX_FLAGS "--sysroot ${CMAKE_OSX_SYSROOT} ${CMAKE_CXX_FLAGS}")
 
