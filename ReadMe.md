@@ -3,6 +3,7 @@
 #### gperftools
 ```shell
 arch -x86_64 /usr/local/bin/brew  install gperftools
+ibrew test gperftools
 ibrew install ps2pdf
 ```
 
